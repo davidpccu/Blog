@@ -6,29 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>Tranquilpeak Theme 快速安裝、設定 - Owen&#39;s Blog</title>
+    <title>ASP.NET取得IP - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
     
-        <meta name="keywords" content="hexo,theme,tranquilpeak">
+        <meta name="keywords" content="IP,QueryString,UrlDecode,Asp.Net">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="A gorgeous responsive theme for Hexo blog framework   Quick Start!">
-<meta name="keywords" content="hexo,theme,tranquilpeak">
+    <meta name="description" content="一般在ASP.NET通常會使用Request.ServerVariables[“REMOTE_ADDR”]來取得使用者的IP。 但遇到代理伺服器時，則IP會變成是代理伺服器的，這時我們必須使用另外的方式取得使用者的IP。">
+<meta name="keywords" content="IP,QueryString,UrlDecode,Asp.Net">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Tranquilpeak Theme 快速安裝、設定">
-<meta property="og:url" content="https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/index.html">
+<meta property="og:title" content="ASP.NET取得IP">
+<meta property="og:url" content="https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="A gorgeous responsive theme for Hexo blog framework   Quick Start!">
-<meta property="og:image" content="https://badges.gitter.im/Join%20Chat.svg">
-<meta property="og:image" content="http://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v1.10.jpg">
-<meta property="og:updated_time" content="2017-05-17T06:55:00.771Z">
+<meta property="og:description" content="一般在ASP.NET通常會使用Request.ServerVariables[“REMOTE_ADDR”]來取得使用者的IP。 但遇到代理伺服器時，則IP會變成是代理伺服器的，這時我們必須使用另外的方式取得使用者的IP。">
+<meta property="og:updated_time" content="2017-05-24T03:08:57.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tranquilpeak Theme 快速安裝、設定">
-<meta name="twitter:description" content="A gorgeous responsive theme for Hexo blog framework   Quick Start!">
-<meta name="twitter:image" content="https://badges.gitter.im/Join%20Chat.svg">
+<meta name="twitter:title" content="ASP.NET取得IP">
+<meta name="twitter:description" content="一般在ASP.NET通常會使用Request.ServerVariables[“REMOTE_ADDR”]來取得使用者的IP。 但遇到代理伺服器時，則IP會變成是代理伺服器的，這時我們必須使用另外的方式取得使用者的IP。">
     
     
         
@@ -187,20 +184,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Tranquilpeak Theme 快速安裝、設定
+            ASP.NET取得IP
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-05-12T12:00:00+08:00">
+    <time itemprop="datePublished" datetime="2017-05-24T12:00:00+08:00">
 	
-		    5月 12, 2017
+		    5月 24, 2017
     	
     </time>
     
         <span>分類 </span>
         
-    <a class="category-link" href="/Blog/categories/Hexo/">Hexo</a>
+    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
 
 
     
@@ -211,30 +208,12 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p><a href="https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank" rel="external"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak"></a></p>
-<p>A gorgeous responsive theme for Hexo blog framework </p>
-<p><a href="http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak" target="_blank" rel="external"><img src="http://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v1.10.jpg" alt="Tranquilpeak"></a></p>
-<p>Quick Start!</p>
+            <p>一般在ASP.NET通常會使用<br>Request.ServerVariables[“REMOTE_ADDR”]來取得使用者的IP。</p>
+<p>但遇到代理伺服器時，則IP會變成是代理伺服器的，這時我們必須使用另外的方式取得使用者的IP。</p>
 <a id="more"></a>
-<h1 id="Developer-documentation"><a href="#Developer-documentation" class="headerlink" title="Developer documentation"></a>Developer documentation</h1><p>This documentation will help you to understand Tranquilpeak Hexo theme code.  </p>
-<p><a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/docs/developer.md">Developer documentation</a><br><a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/docs/user.md#author">User documentation</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1. Run git <span class="built_in">clone</span> https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git</div><div class="line">2. Rename the folder <span class="keyword">in</span> tranquilpeak and place it <span class="keyword">in</span> themes folder of your Hexo blog</div><div class="line">3. Modify the theme <span class="keyword">in</span> _config.yml by changing theme variable to tranquilpeak</div><div class="line"></div><div class="line">Go <span class="keyword">in</span> theme/tranquilpeak folder</div><div class="line">$ npm install hexo-cli -g</div><div class="line">$ npm install grunt-cli -g</div><div class="line">$ npm install bower -g</div><div class="line">$ npm install</div><div class="line">$ bower install</div><div class="line">$ grunt buildProd</div><div class="line">--</div><div class="line">$ npm run start</div><div class="line">$ npm run prod (before deploying your blog)</div><div class="line">$ hexo s (start coding!)</div></pre></td></tr></table></figure>
-<h3 id="Hexo的設置"><a href="#Hexo的設置" class="headerlink" title="Hexo的設置"></a>Hexo的設置</h3><p>hexo目錄下的_config.yml修改如下設置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">theme: tranquilpeak</div><div class="line">post_assert_folder: <span class="literal">true</span></div></pre></td></tr></table></figure></p>
-<h3 id="tranquilpeak設置"><a href="#tranquilpeak設置" class="headerlink" title="tranquilpeak設置"></a>tranquilpeak設置</h3><p>請參考官方文件 <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/docs/user.md#author">User documentation</a></p>
-<h3 id="author設定"><a href="#author設定" class="headerlink" title="author設定"></a>author設定</h3><p>languages zh-tw.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 你的個人簡介 (支援 Markdown 和 HTML 語法)</span></div><div class="line">bio: <span class="string">"&lt;I am Web developer&gt;"</span></div><div class="line"><span class="comment"># 你的工作簡介</span></div><div class="line">job: <span class="string">"&lt;Developer&gt;"</span></div></pre></td></tr></table></figure></p>
-<h3 id="使用分頁-all-categories-頁面"><a href="#使用分頁-all-categories-頁面" class="headerlink" title="使用分頁(all-categories)頁面"></a>使用分頁(all-categories)頁面</h3><p>如果文章有分類的話，可以使用all-categories頁面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page all-categories</div></pre></td></tr></table></figure></p>
-<p>在source產生一個新的文件夾all-categories，文件夾內的文件index.md修改成如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"all-categories"</span></div><div class="line">layout: <span class="string">"all-categories"</span></div><div class="line">comments: <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p>在_config.yml內siderbar的categories的url設置成/all-categories</p>
-<h3 id="使用all-tags頁面"><a href="#使用all-tags頁面" class="headerlink" title="使用all-tags頁面"></a>使用all-tags頁面</h3><p>如果文章有標籤，可以使用all-tags頁面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page all-tags</div></pre></td></tr></table></figure></p>
-<p>在source產生一個新的文件夾all-tags，文件夾內的文件index.md修改成如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"all-tags"</span></div><div class="line">layout: <span class="string">"all-tags"</span></div><div class="line">comments: <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p>在_config.yml內siderbar的categories的url設置成/all-tags</p>
-<h3 id="使用all-archives頁面"><a href="#使用all-archives頁面" class="headerlink" title="使用all-archives頁面"></a>使用all-archives頁面</h3><p>archives是對所有文章按月份分類<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page all-archives</div></pre></td></tr></table></figure></p>
-<p>在source產生一個新的文件夾all-archives，文件夾內的文件index.md修改成如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"all-archives"</span></div><div class="line">layout: <span class="string">"all-archives"</span></div><div class="line">comments: <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p>在_config.yml內siderbar的categories的url設置成/all-archives</p>
-<h3 id="個性化的文章內容"><a href="#個性化的文章內容" class="headerlink" title="個性化的文章內容"></a>個性化的文章內容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Tranquilpeak Theme 快速安裝、設定</div><div class="line">date: 2017-05-12 12:00:00</div><div class="line">categories: Hexo</div><div class="line">tags:</div><div class="line">- Hexo</div><div class="line">keywords:</div><div class="line">- hexo</div><div class="line">- theme</div><div class="line">- tranquilpeak</div><div class="line">---</div></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>clean<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure></p>
-<p>清除暫存文件，如果發現對網站的更改無論如何也不生效，才可能需要執行(EX: all-tags、all-archives、all-categories)。</p>
-<p><a href="http://www.jianshu.com/p/d4294d83b709" target="_blank" rel="external">參考1</a><br><a href="http://blog.guotengda.win/2017/01/07/tranquilpeak%E4%B8%BB%E9%A2%98%E7%9A%84%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">參考2</a></p>
+<h3 id="判所client端是否有設定代理伺服器"><a href="#判所client端是否有設定代理伺服器" class="headerlink" title="判所client端是否有設定代理伺服器"></a>判所client端是否有設定代理伺服器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Request.ServerVariables[<span class="string">"HTTP_VIA"</span>] == null)</div><div class="line">&#123; </div><div class="line">    myIpAddress = Request.ServerVariables[<span class="string">"REMOTE_ADDR"</span>].ToString(); </div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123; </div><div class="line">    myIpAddress = Request.ServerVariables[<span class="string">"HTTP_X_FORWARDED_FOR"</span>].ToString(); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="取得QueryString"><a href="#取得QueryString" class="headerlink" title="取得QueryString"></a>取得QueryString</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">string s = Request.Url.Query;</div></pre></td></tr></table></figure>
+<h3 id="UrlDecode-針對中文字進行Decode"><a href="#UrlDecode-針對中文字進行Decode" class="headerlink" title="UrlDecode 針對中文字進行Decode"></a>UrlDecode 針對中文字進行Decode</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">string s = HttpUtility.UrlDecode(Request.Url.Query);</div></pre></td></tr></table></figure>
 
             
         </div>
@@ -244,7 +223,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">標籤</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/Hexo/">Hexo</a>
+    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/Asp-Net/">Asp.Net</a>
 
             </div>
         
@@ -254,7 +233,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/16/20170516_Aspx/"  data-tooltip="驗證網頁是否執行 Validator">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -262,7 +241,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/11/20170511_Hexo/" data-tooltip="Hexo 指令">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/17/20170517_Aspx/" data-tooltip="PostBack 後回到原來停留的位置">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -280,7 +259,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -288,7 +267,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -296,7 +275,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -336,7 +315,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/16/20170516_Aspx/"  data-tooltip="驗證網頁是否執行 Validator">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -344,7 +323,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/11/20170511_Hexo/" data-tooltip="Hexo 指令">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/05/17/20170517_Aspx/" data-tooltip="PostBack 後回到原來停留的位置">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -362,7 +341,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -370,7 +349,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -378,7 +357,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -403,7 +382,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
                 </a>
             </li>
@@ -411,7 +390,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
                 </a>
             </li>
@@ -419,7 +398,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/12/20170512_Tranquilpeak/">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://github.com/davidpccu/Blog/2017/05/24/20170524_Aspx/">
                     <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
                 </a>
             </li>
