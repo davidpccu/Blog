@@ -6,22 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>標籤: Asp.Net - Owen&#39;s Blog</title>
+    <title>『筆記』 非同步載入CSS (Lazy Load CSS) - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
+    
+        <meta name="keywords" content="Html,CSS,LazyLoad">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="Learning note / Web developer / Asp.Net">
+    <meta name="description" content="以往當網頁要套用CSS時，都會將css以link的方式，寫在網頁的head間。這時會看到，一開始畫面是全白，直到css全部載入完畢後，畫面才會一次顯示出來。">
+<meta name="keywords" content="Html,CSS,LazyLoad">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Owen&#39;s Blog">
-<meta property="og:url" content="https://lwsu.com.tw/Blog/tags/Asp-Net/index.html">
+<meta property="og:title" content="『筆記』 非同步載入CSS (Lazy Load CSS)">
+<meta property="og:url" content="https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="Learning note / Web developer / Asp.Net">
+<meta property="og:description" content="以往當網頁要套用CSS時，都會將css以link的方式，寫在網頁的head間。這時會看到，一開始畫面是全白，直到css全部載入完畢後，畫面才會一次顯示出來。">
+<meta property="og:updated_time" content="2017-06-08T06:24:00.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Owen&#39;s Blog">
-<meta name="twitter:description" content="Learning note / Web developer / Asp.Net">
+<meta name="twitter:title" content="『筆記』 非同步載入CSS (Lazy Load CSS)">
+<meta name="twitter:description" content="以往當網頁要套用CSS時，都會將css以link的方式，寫在網頁的head間。這時會看到，一開始畫面是全白，直到css全部載入完畢後，畫面才會一次顯示出來。">
     
     
         
@@ -61,7 +65,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/Blog/ ">Owen&#39;s Blog</a>
@@ -85,7 +89,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -169,195 +173,131 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/06/01/20170601_Aspx/">
-                            『筆記』 Array陣列中加入元素
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-06-01T12:00:00+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            『筆記』 非同步載入CSS (Lazy Load CSS)
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-06-08T12:00:00+08:00">
 	
-		    6月 01, 2017
+		    6月 08, 2017
     	
     </time>
     
         <span>分類 </span>
         
-    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
+    <a class="category-link" href="/Blog/categories/CSS/">CSS</a>
 
 
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Array陣列中加入元素</p>
-                    
-                        <a href="/Blog/2017/06/01/20170601_Aspx/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/24/20170524_Aspx/">
-                            ASP.NET取得IP
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-24T12:00:00+08:00">
-	
-		    5月 24, 2017
-    	
-    </time>
-    
-        <span>分類 </span>
-        
-    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
-
-
     
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>以往當網頁要套用CSS時，都會將css以link的方式，寫在網頁的head間。<br>這時會看到，一開始畫面是全白，直到css全部載入完畢後，畫面才會一次顯示出來。</p>
+<a id="more"></a>
+<p>因此這時將下方的語法加入後，當要載入CSS時，將css放到a.href，當有多組多，就自行建立多個，最後再z.parentNode.insertBefore依序的加入即可。</p>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    var cb = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        var a = document.createElement(<span class="string">'link'</span>); </div><div class="line">        a.rel = <span class="string">'stylesheet'</span>;</div><div class="line">        a.href = <span class="string">'fonts/general-j/mplus_webfonts.css'</span>;</div><div class="line">    </div><div class="line">        var b = document.createElement(<span class="string">'link'</span>); </div><div class="line">        b.rel = <span class="string">'stylesheet'</span>;</div><div class="line">        b.href = <span class="string">'fonts/basic_latin/mplus_webfonts.css'</span>;</div><div class="line">    </div><div class="line">        var z = document.getElementsByTagName(<span class="string">'head'</span>)[0];</div><div class="line">        z.parentNode.insertBefore(a,z);</div><div class="line">        z.parentNode.insertBefore(b,z);</div><div class="line">    &#125;;</div><div class="line">        var raf = requestAnimationFrame || mozRequestAnimationFrame ||</div><div class="line">        webkitRequestAnimationFrame || msRequestAnimationFrame;</div><div class="line">    <span class="keyword">if</span> (raf) raf(cb);</div><div class="line">    <span class="keyword">else</span> window.addEventListener(<span class="string">'load'</span>, cb);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p><a href="https://www.minwt.com/webdesign-dev/css/16146.html" target="_blank" rel="external">參考</a></p>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>一般在ASP.NET通常會使用<br>Request.ServerVariables[“REMOTE_ADDR”]來取得使用者的IP。</p>
-<p>但遇到代理伺服器時，則IP會變成是代理伺服器的，這時我們必須使用另外的方式取得使用者的IP。</p>
-                    
-                        <a href="/Blog/2017/05/24/20170524_Aspx/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/17/20170517_Aspx/">
-                            PostBack 後回到原來停留的位置
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-17T12:00:00+08:00">
-	
-		    5月 17, 2017
-    	
-    </time>
-    
-        <span>分類 </span>
-        
-    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
-
-
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">標籤</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/CSS/">CSS</a> <a class="tag tag--primary tag--small t-link" href="/Blog/tags/Html/">Html</a> <a class="tag tag--primary tag--small t-link" href="/Blog/tags/LazyLoad/">LazyLoad</a>
 
             </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>在 PostBack後網頁通常會回到最頂端的位置，目前有下面三個方式可以讓單頁或整個Web或目錄PostBack後回到原來停留的位置<br>但是，如果網頁頁面長度不一，PostBack後回到的位置也會有所差異。</p>
-                    
-                        <a href="/Blog/2017/05/17/20170517_Aspx/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/16/20170516_Aspx/">
-                            驗證網頁是否執行 Validator
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-16T12:00:00+08:00">
-	
-		    5月 16, 2017
-    	
-    </time>
-    
-        <span>分類 </span>
-        
-    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>驗證網頁是否執行 Validator，避免被有心人修改後導致不會觸發Validator</p>
-                    
-                        <a href="/Blog/2017/05/16/20170516_Aspx/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
         
         
-        <li class="pagination-number">第 1 頁 共 1 頁</li>
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/08/20170608_JS/"  data-tooltip="『筆記』 Script Tag - async &amp; defer">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/01/20170601_Aspx/" data-tooltip="『筆記』 Array陣列中加入元素">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+        
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -367,6 +307,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/08/20170608_JS/"  data-tooltip="『筆記』 Script Tag - async &amp; defer">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/01/20170601_Aspx/" data-tooltip="『筆記』 Array陣列中加入元素">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/08/20170608_Html/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -601,6 +639,8 @@
         <!--SCRIPTS-->
 <script src="/Blog/assets/js/script-lntdswfnsa2hgs7n4timmldw3koe4o5bwpgag1jebky598fqvzqdccxejqc5.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>
