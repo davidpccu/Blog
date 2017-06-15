@@ -15,18 +15,19 @@
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 async 和 defer 差別">
+    <meta name="description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 Hhml5 新增屬性 async 和 defer 差別">
 <meta name="keywords" content="Html,Javascript">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="『筆記』 Script Tag - async &amp; defer">
 <meta property="og:url" content="https://lwsu.com.tw/Blog/2017/06/08/20170608_JS/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 async 和 defer 差別">
+<meta property="og:description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 Hhml5 新增屬性 async 和 defer 差別">
 <meta property="og:image" content="https://image.ibb.co/nMmMQv/execution2.jpg">
-<meta property="og:updated_time" content="2017-06-08T06:39:07.362Z">
+<meta property="og:image" content="https://lwsu.com.tw/img/20170608.jpg">
+<meta property="og:updated_time" content="2017-06-15T01:48:33.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『筆記』 Script Tag - async &amp; defer">
-<meta name="twitter:description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 async 和 defer 差別">
+<meta name="twitter:description" content="我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步 筆記一下 Hhml5 新增屬性 async 和 defer 差別">
 <meta name="twitter:image" content="https://image.ibb.co/nMmMQv/execution2.jpg">
     
     
@@ -211,16 +212,16 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <p>我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步</p>
-<p>筆記一下 async 和 defer 差別</p>
+<p>筆記一下 Hhml5 新增屬性 async 和 defer 差別</p>
 <a id="more"></a>
-<h3 id="async-amp-amp-defer"><a href="#async-amp-amp-defer" class="headerlink" title="async &amp;&amp; defer"></a>async &amp;&amp; defer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>整個網頁的繪製會停下，等 demo.js 下載完並執行完，網頁繪製才繼續。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> defer &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> defer &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>網頁繪製不會停下， demo.js 在背景下載，待 DOMContentLoaded 再執行 demo.js 。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> async &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="async"><a href="#async" class="headerlink" title="async"></a>async</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script src=<span class="string">"demo.js"</span> async &gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>待 demo.js 下載完畢，網頁繪製停下，執行 demo.js 。</p>
 <p>時序圖參考</p>
-<p><a href="https://image.ibb.co/nMmMQv/execution2.jpg" target="_blank" rel="external"><img src="https://image.ibb.co/nMmMQv/execution2.jpg" alt="JavaScript execution explained"></a></p>
+<p><a href="https://image.ibb.co/nMmMQv/execution2.jpg" target="_blank" rel="external"><img src="https://image.ibb.co/nMmMQv/execution2.jpg" alt="JavaScript execution explained"></a><br><img src="/img/20170608.jpg" alt="JavaScript execution explained"></p>
 <p><a href="http://blog.xuite.net/vexed/tech/61308318-script+tag+%E5%B1%AC%E6%80%A7+async+defer+%E5%B7%AE%E5%88%A5" target="_blank" rel="external">參考</a></p>
 
             
@@ -241,7 +242,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/15/20170615_SQL/"  data-tooltip="T-SQL - 取每一群組的第一筆">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -323,7 +324,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/15/20170615_SQL/"  data-tooltip="T-SQL - 取每一群組的第一筆">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -624,7 +625,27 @@
                             </span>
                         </span>
                         <div class="media-content hide-xs font-merryweather"><p>我們常用的JS腳本標籤，有兩個屬文件下載執行相關的屬性：延遲和異步</p>
-<p>筆記一下 async 和 defer 差別</p></div>
+<p>筆記一下 Hhml5 新增屬性 async 和 defer 差別</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://lwsu.com.tw/Blog/2017/06/15/20170615_SQL/">
+                            <h3 class="media-heading">T-SQL - 取每一群組的第一筆</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年6月15日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>筆記 T-SQL</p>
+<p>取每一群組的第一筆</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -637,7 +658,7 @@
                 data-message-zero="沒有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 8 篇文章
+                找到 9 篇文章
             </p>
         </div>
     </div>
