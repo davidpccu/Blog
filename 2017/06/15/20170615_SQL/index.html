@@ -22,12 +22,12 @@
 <meta property="og:url" content="https://lwsu.com.tw/Blog/2017/06/15/20170615_SQL/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
 <meta property="og:description" content="筆記 T-SQL 取每一群組的第一筆">
-<meta property="og:image" content="https://lwsu.com.tw/img/20170615.jpg">
-<meta property="og:updated_time" content="2017-06-15T01:48:09.682Z">
+<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20170615.jpg">
+<meta property="og:updated_time" content="2017-06-15T02:20:32.407Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="T-SQL - 取每一群組的第一筆">
 <meta name="twitter:description" content="筆記 T-SQL 取每一群組的第一筆">
-<meta name="twitter:image" content="https://lwsu.com.tw/img/20170615.jpg">
+<meta name="twitter:image" content="https://lwsu.com.tw/Blog/img/20170615.jpg">
     
     
         
@@ -215,7 +215,7 @@
 <a id="more"></a>
 <h3 id="T-SQL"><a href="#T-SQL" class="headerlink" title="T-SQL"></a>T-SQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">DECLARE @table TABLE (ID nvarchar(10), Memo nvarchar(10))</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'AA'</span>, <span class="string">'A7'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'AA'</span>, <span class="string">'A2'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'AA'</span>, <span class="string">'A6'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'BB'</span>, <span class="string">'B6'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'BB'</span>, <span class="string">'B5'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'CC'</span>, <span class="string">'C9'</span>)</div><div class="line">INSERT INTO @table (ID, Memo) VALUES (<span class="string">'CC'</span>, <span class="string">'C3'</span>)</div><div class="line">SELECT ID, </div><div class="line">(</div><div class="line">    SELECT TOP 1 Memo </div><div class="line">    FROM  @table AS T2</div><div class="line">    WHERE T2.ID = T1.ID</div><div class="line">    GROUP BY Memo</div><div class="line">) AS [Memo]</div><div class="line">FROM @table AS T1</div><div class="line">GROUP BY ID</div></pre></td></tr></table></figure>
 <p>結果</p>
-<p><img src="/img/20170615.jpg" alt="JavaScript execution explained"></p>
+<p><img src="../../../../img/20170615.jpg" alt="T-SQL"></p>
 <p><a href="http://blog.xuite.net/vexed/tech/61308318-script+tag+%E5%B1%AC%E6%80%A7+async+defer+%E5%B7%AE%E5%88%A5" target="_blank" rel="external">參考</a></p>
 
             
