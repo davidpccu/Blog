@@ -6,26 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>乙太幣 - 簡介 - Owen&#39;s Blog</title>
+    <title>T-SQL筆記 - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
     
-        <meta name="keywords" content="Ethereum,乙太幣,以太坊">
+        <meta name="keywords" content="SQL">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="以太坊(Ethereum)，是一個開源的智慧合約的公共區塊鏈。 乙太幣(ETH)是以太坊(Ethereum)的數位貨幣，開發者們需要支付乙太幣(ETH)來進行應用。 通過其專用加密貨幣乙太幣（Ether）提供去中心化的虛擬機器(Ethereum Virtual Machin)來處理對等合約。 截至2017年6月，乙太幣是市值第二高的加密貨幣，僅次於比特幣。">
-<meta name="keywords" content="Ethereum,乙太幣,以太坊">
+    <meta name="description" content="記錄一下T-SQL常用的語法">
+<meta name="keywords" content="SQL">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="乙太幣 - 簡介">
-<meta property="og:url" content="https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/index.html">
+<meta property="og:title" content="T-SQL筆記">
+<meta property="og:url" content="https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="以太坊(Ethereum)，是一個開源的智慧合約的公共區塊鏈。 乙太幣(ETH)是以太坊(Ethereum)的數位貨幣，開發者們需要支付乙太幣(ETH)來進行應用。 通過其專用加密貨幣乙太幣（Ether）提供去中心化的虛擬機器(Ethereum Virtual Machin)來處理對等合約。 截至2017年6月，乙太幣是市值第二高的加密貨幣，僅次於比特幣。">
-<meta property="og:updated_time" content="2017-06-23T02:24:21.413Z">
+<meta property="og:description" content="記錄一下T-SQL常用的語法">
+<meta property="og:updated_time" content="2017-09-22T09:29:35.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乙太幣 - 簡介">
-<meta name="twitter:description" content="以太坊(Ethereum)，是一個開源的智慧合約的公共區塊鏈。 乙太幣(ETH)是以太坊(Ethereum)的數位貨幣，開發者們需要支付乙太幣(ETH)來進行應用。 通過其專用加密貨幣乙太幣（Ether）提供去中心化的虛擬機器(Ethereum Virtual Machin)來處理對等合約。 截至2017年6月，乙太幣是市值第二高的加密貨幣，僅次於比特幣。">
+<meta name="twitter:title" content="T-SQL筆記">
+<meta name="twitter:description" content="記錄一下T-SQL常用的語法">
     
     
         
@@ -184,20 +184,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            乙太幣 - 簡介
+            T-SQL筆記
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-06-23T12:00:00+08:00">
+    <time itemprop="datePublished" datetime="2017-09-22T12:00:00+08:00">
 	
-		    6月 23, 2017
+		    9月 22, 2017
     	
     </time>
     
         <span>分類 </span>
         
-    <a class="category-link" href="/Blog/categories/乙太幣/">乙太幣</a>
+    <a class="category-link" href="/Blog/categories/SQL/">SQL</a>
 
 
     
@@ -208,36 +208,9 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>以太坊(Ethereum)，是一個開源的智慧合約的公共區塊鏈。</p>
-<p>乙太幣(ETH)是以太坊(Ethereum)的數位貨幣，開發者們需要支付乙太幣(ETH)來進行應用。</p>
-<p>通過其專用加密貨幣乙太幣（Ether）提供去中心化的虛擬機器(Ethereum Virtual Machin)來處理對等合約。</p>
-<p>截至2017年6月，乙太幣是市值第二高的加密貨幣，僅次於比特幣。<br><a id="more"></a></p>
-<h3 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h3><p>ETH是一種點對點的電子現金系統</p>
-<p>目前市面上絕大多數電子支付系統，都需要一個第三方(EX:銀行)來控管你的帳戶，所以你的錢其實都在第三方的掌握之中，</p>
-<p>ETH目的在於創造一個無特定人可以控管的帳本系統，透過P2P網路交換電子簽章，並且會被收納到帳本裡。</p>
-<p>透過一個『挖礦』的機制獎勵使用者驗證交易提高帳本安全性。</p>
-<p>乙太幣的價值並不是因為這個記帳單位有多厲害多有擔保，發行銀行多強大，而是前所未有的『分散式機制』。</p>
-<p>而不像現有的電匯那樣緩慢，或是Paypal的高成本，或是其他第三方支付有國家侷限性。</p>
-<h3 id="主要特色"><a href="#主要特色" class="headerlink" title="主要特色"></a>主要特色</h3><ul>
-<li>全球可及、快速、安全、隱私、低成本、所有人都可使用。</li>
-<li>智慧合約（smart contract）：儲存在區塊鏈上的程式，由各節點執行，需要執行程式的人支付手續費給結點的礦工或權益人。</li>
-</ul>
-<p>乙太幣最重要的技術就是智慧合約。智慧合約是儲存在區塊鍵上的程式，可以協助和驗證合約的談判和執行。</p>
-<h3 id="挖礦-Mining"><a href="#挖礦-Mining" class="headerlink" title="挖礦 Mining"></a>挖礦 Mining</h3><p>乙太幣這個記帳單位的產生來自於挖礦，而產出總量上限是固定的，約9000萬顆至1億顆。</p>
-<p>礦工的工作和其實和銀行類似，會去驗證每一筆的交易的有效性，並且會去消耗運算資源產生帳本，使的帳本(區塊)難以任意偽造。</p>
-<p>而礦工成功產生一本帳本後，也可以得到獎勵，因此大家就會搶著當礦工，並且讓產生帳本的難度提高，使得整個體系的安全度更高。</p>
-<p>整個系統裡的帳本(區塊)不斷地產生，我們稱這個帳本系統叫做區塊鍊。</p>
-<h3 id="區塊鍊-Blockchain"><a href="#區塊鍊-Blockchain" class="headerlink" title="區塊鍊 Blockchain"></a>區塊鍊 Blockchain</h3><p>礦工會藉由P2P網路不斷地接收到來自世界各地的交易，而符合規則的交易就會被納入到區塊裡，最基本的規則就是電子簽章要符合，就跟一般支票一樣，需要確認簽名是否正確。</p>
-<p>礦工會不斷去挖礦去算工作量證明，當達到系統設定的標準，帳本難度夠高了。</p>
-<p>那這本帳本就會被廣播出去，讓世界上所有的完整節點接收到新帳本。</p>
-<p>假如你的交易有在這新的帳本(區塊)裡，那就是你的交易得到了確認，因為有效帳本只有一本，所以交易確認後就無法複製或偽造，</p>
-<h3 id="交易-Transaction"><a href="#交易-Transaction" class="headerlink" title="交易 Transaction"></a>交易 Transaction</h3><p>系統裡的交易可以把它想像成就是在簽支票，當別人給我們了有效的乙太幣支票。</p>
-<p>那我們的帳戶裡就會顯示有乙太幣，這個時候我們就可以簽支票給別人。</p>
-<p>這個時候就會需要用到我們的印章(私鑰)進行簽章，確保我們簽出去的支票是有效的。</p>
-<p>同樣我們也會把這筆交易廣播出去。</p>
-<p>礦工會用公鑰確認這張支票是不是真的是對應私鑰所簽發，檢查付的手續費夠不夠。</p>
-<p>所有標準都有達到就會加到自己的帳本中。當新區塊產生時，你的交易就可以得到確認。</p>
-<p><a href="https://www.ptt.cc/bbs/DigiCurrency/M.1451231706.A.D66.html" target="_blank" rel="external">參考</a></p>
+            <p>記錄一下T-SQL常用的語法</p>
+<a id="more"></a>
+<h3 id="T-SQL-學習筆記"><a href="#T-SQL-學習筆記" class="headerlink" title="T-SQL - 學習筆記"></a>T-SQL - 學習筆記</h3><p><a href="https://github.com/davidpccu/MS-SQL" target="_blank" rel="external">連結</a></p>
 
             
         </div>
@@ -247,7 +220,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">標籤</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/乙太幣/">乙太幣</a>
+    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/SQL/">SQL</a>
 
             </div>
         
@@ -257,7 +230,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/08/03/20170803_Aspx/"  data-tooltip="ASP.NET - List 泛型物件存到 Viewstate">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -265,7 +238,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/15/20170615_SQL/" data-tooltip="T-SQL - 取每一群組的第一筆">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/09/20/20170804_Aspx/" data-tooltip="Learn-Regex">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -283,7 +256,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -291,7 +264,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -299,7 +272,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -339,7 +312,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/08/03/20170803_Aspx/"  data-tooltip="ASP.NET - List 泛型物件存到 Viewstate">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -347,7 +320,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/06/15/20170615_SQL/" data-tooltip="T-SQL - 取每一群組的第一筆">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/09/20/20170804_Aspx/" data-tooltip="Learn-Regex">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -365,7 +338,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -373,7 +346,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -381,7 +354,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -406,7 +379,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
                 </a>
             </li>
@@ -414,7 +387,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
                 </a>
             </li>
@@ -422,7 +395,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/06/23/20170623_ETH/">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/22/20170922_SQL/">
                     <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
                 </a>
             </li>
