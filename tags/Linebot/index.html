@@ -6,28 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>T-SQL - 列出區間內每日日期 - Owen&#39;s Blog</title>
+    <title>標籤: Linebot - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
-    
-        <meta name="keywords" content="T-SQL">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="筆記 T-SQL 列出區間內每日日期">
-<meta name="keywords" content="T-SQL">
+    <meta name="description" content="Learning note / Web developer / Asp.Net">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="T-SQL - 列出區間內每日日期">
-<meta property="og:url" content="https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/index.html">
+<meta property="og:title" content="Owen&#39;s Blog">
+<meta property="og:url" content="https://lwsu.com.tw/Blog/tags/Linebot/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="筆記 T-SQL 列出區間內每日日期">
-<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20170926.jpg">
-<meta property="og:updated_time" content="2017-09-26T03:40:49.048Z">
+<meta property="og:description" content="Learning note / Web developer / Asp.Net">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="T-SQL - 列出區間內每日日期">
-<meta name="twitter:description" content="筆記 T-SQL 列出區間內每日日期">
-<meta name="twitter:image" content="https://lwsu.com.tw/Blog/img/20170926.jpg">
+<meta name="twitter:title" content="Owen&#39;s Blog">
+<meta name="twitter:description" content="Learning note / Web developer / Asp.Net">
     
     
         
@@ -67,7 +61,7 @@
         
     
 
-<header id="header" data-behavior="4">
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/Blog/ ">Owen&#39;s Blog</a>
@@ -91,7 +85,7 @@
         
     
 
-<nav id="sidebar" data-behavior="4">
+<nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -175,132 +169,65 @@
 </nav>
 
             
-            <div id="main" data-behavior="4"
+            <div id="main" data-behavior="1"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            T-SQL - 列出區間內每日日期
-        </h1>
-    
-    
-        <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-09-26T12:00:00+08:00">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/Blog/2017/12/19/20171219_Nodejs/">
+                            Line Chatbot with KKBOX Open API
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-12-19T12:00:00+08:00">
 	
-		    9月 26, 2017
+		    12月 19, 2017
     	
     </time>
     
         <span>分類 </span>
         
-    <a class="category-link" href="/Blog/categories/T-SQL/">T-SQL</a>
+    <a class="category-link" href="/Blog/categories/Nodejs/">Nodejs</a>
 
 
     
 </div>
-
-    
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>筆記 T-SQL</p>
-<p>列出區間內每日日期</p>
-<a id="more"></a>
-<h3 id="T-SQL"><a href="#T-SQL" class="headerlink" title="T-SQL"></a>T-SQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">DECLARE @Start_Date datetime</div><div class="line">DECLARE @End_Date datetime</div><div class="line"></div><div class="line">SET @Start_Date = <span class="string">'2017/01/01'</span></div><div class="line">SET @End_Date = <span class="string">'2017/04/01'</span></div><div class="line"></div><div class="line">DECLARE @DayTable TABLE (</div><div class="line">    Input_Date date not null primary key</div><div class="line">)</div><div class="line"></div><div class="line">DECLARE @Temp_Date DATE = @Start_Date</div><div class="line"></div><div class="line">WHILE ( @Temp_Date &lt;= @End_Date )</div><div class="line">BEGIN</div><div class="line">INSERT INTO @DayTable VALUES( @Temp_Date )</div><div class="line">SELECT @Temp_Date = DATEADD(DAY, 1, @Temp_Date )</div><div class="line">END</div><div class="line"></div><div class="line">SELECT *</div><div class="line">FROM @DayTable</div></pre></td></tr></table></figure>
-<p>結果</p>
-<p><img src="../../../../img/20170926.jpg" alt="T-SQL"></p>
-
-            
-        </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">標籤</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/T-SQL/">T-SQL</a>
 
             </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>使用 Node.js 建立 Line機器人呼叫 KKBOX open API</p>
+                    
+                        <a href="/Blog/2017/12/19/20171219_Nodejs/" class="postShorten-excerpt_link link">
+                            繼續閱讀
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
         
         
-            <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/10/27/20171027_Aspx/"  data-tooltip="永豐證券API下單">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/09/22/20170922_SQL/" data-tooltip="T-SQL筆記">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        <li class="pagination-number">第 1 頁 共 1 頁</li>
     </ul>
 </div>
 
-
-        
-        
-            
-        
-    </div>
-</article>
-
+</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -310,104 +237,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/10/27/20171027_Aspx/"  data-tooltip="永豐證券API下單">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/09/22/20170922_SQL/" data-tooltip="T-SQL筆記">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/09/26/20170926_SQL/">
-                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
-
             
         </div>
         
@@ -684,8 +513,6 @@
         <!--SCRIPTS-->
 <script src="/Blog/assets/js/script-lntdswfnsa2hgs7n4timmldw3koe4o5bwpgag1jebky598fqvzqdccxejqc5.min.js"></script>
 <!--SCRIPTS END-->
-
-    
 
 
     </body>
