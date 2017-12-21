@@ -6,22 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>標籤: CSS - Owen&#39;s Blog</title>
+    <title>ASP.NET - DataTables join 多個 table [LINQ] - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
+    
+        <meta name="keywords" content="Asp.Net,LINQ">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="Learning note / Web developer / Asp.Net">
+    <meta name="description" content="當資料來源為XML時，當你轉換成dataset時，會有資料變成多個table的情況 透過 LINQ 去 Join 2 個DataTable，並回傳DataTable">
+<meta name="keywords" content="Asp.Net,LINQ">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Owen&#39;s Blog">
-<meta property="og:url" content="https://lwsu.com.tw/Blog/tags/CSS/index.html">
+<meta property="og:title" content="ASP.NET - DataTables join 多個 table [LINQ]">
+<meta property="og:url" content="https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="Learning note / Web developer / Asp.Net">
+<meta property="og:description" content="當資料來源為XML時，當你轉換成dataset時，會有資料變成多個table的情況 透過 LINQ 去 Join 2 個DataTable，並回傳DataTable">
+<meta property="og:updated_time" content="2017-12-21T03:41:09.867Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Owen&#39;s Blog">
-<meta name="twitter:description" content="Learning note / Web developer / Asp.Net">
+<meta name="twitter:title" content="ASP.NET - DataTables join 多個 table [LINQ]">
+<meta name="twitter:description" content="當資料來源為XML時，當你轉換成dataset時，會有資料變成多個table的情況 透過 LINQ 去 Join 2 個DataTable，並回傳DataTable">
     
     
         
@@ -61,7 +65,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/Blog/ ">Owen&#39;s Blog</a>
@@ -85,7 +89,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -169,65 +173,133 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/06/08/20170608_Html/">
-                            『筆記』 非同步載入CSS (Lazy Load CSS)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-06-08T12:00:00+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            ASP.NET - DataTables join 多個 table [LINQ]
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-12-21T12:00:00+08:00">
 	
-		    6月 08, 2017
+		    12月 21, 2017
     	
     </time>
     
         <span>分類 </span>
         
-    <a class="category-link" href="/Blog/categories/CSS/">CSS</a>
+    <a class="category-link" href="/Blog/categories/Asp-Net/">Asp.Net</a>
 
 
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>以往當網頁要套用CSS時，都會將css以link的方式，寫在網頁的head間。<br>這時會看到，一開始畫面是全白，直到css全部載入完畢後，畫面才會一次顯示出來。</p>
-                    
-                        <a href="/Blog/2017/06/08/20170608_Html/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>當資料來源為XML時，當你轉換成dataset時，會有資料變成多個table的情況</p>
+<p>透過 LINQ 去 Join 2 個DataTable，並回傳DataTable<br><a id="more"></a></p>
+<h3 id="Join"><a href="#Join" class="headerlink" title="Join"></a>Join</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var myTable = from PricedItineraryTB <span class="keyword">in</span> myDS.Tables[<span class="string">"PricedItinerary"</span>].AsEnumerable()</div><div class="line">                          join AirItineraryTB <span class="keyword">in</span> myDS.Tables[<span class="string">"AirItinerary"</span>].AsEnumerable() </div><div class="line">                                    on PricedItineraryTB.Field&lt;int&gt;(<span class="string">"PricedItinerary_Id"</span>) equals AirItineraryTB.Field&lt;int&gt;(<span class="string">"PricedItinerary_Id"</span>)</div><div class="line">                          select new</div><div class="line">                          &#123;</div><div class="line">                              PricedItinerary_Id = PricedItineraryTB.Field&lt;int&gt;(<span class="string">"PricedItinerary_Id"</span>),</div><div class="line">                              DirectionInd = AirItineraryTB.Field&lt;string&gt;(<span class="string">"DirectionInd"</span>)</div><div class="line">                          &#125;;</div><div class="line"></div><div class="line">DataTable dt = LinqQueryToDataTable(myTable);</div><div class="line"></div><div class="line"><span class="built_in">return</span> dt;</div></pre></td></tr></table></figure>
+<p>要用for或是foreach組成Datatable是一件很麻煩的事情<br>將此方法可以寫成一個component或是method，下次用到就簡單多了</p>
+<h3 id="IEnumerable轉成DataTable"><a href="#IEnumerable轉成DataTable" class="headerlink" title="IEnumerable轉成DataTable"></a>IEnumerable轉成DataTable</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public static DataTable LinqQueryToDataTable&lt;T&gt;(IEnumerable&lt;T&gt; query)</div><div class="line">        &#123;</div><div class="line">            DataTable tbl = new DataTable();</div><div class="line">            PropertyInfo[] props = null;</div><div class="line">            foreach (T item <span class="keyword">in</span> query)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span> (props == null) //尚未初始化</div><div class="line">                &#123;</div><div class="line">                    Type t = item.GetType();</div><div class="line">                    props = t.GetProperties();</div><div class="line">                    foreach (PropertyInfo pi <span class="keyword">in</span> props)</div><div class="line">                    &#123;</div><div class="line">                        Type colType = pi.PropertyType;</div><div class="line">                        //針對Nullable&lt;&gt;特別處理</div><div class="line">                        <span class="keyword">if</span> (colType.IsGenericType &amp;&amp; colType.GetGenericTypeDefinition() == typeof(Nullable&lt;&gt;))</div><div class="line">                        &#123;</div><div class="line">                            colType = colType.GetGenericArguments()[0];</div><div class="line">                        &#125;</div><div class="line">                        //建立欄位</div><div class="line">                        tbl.Columns.Add(pi.Name, colType);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                DataRow row = tbl.NewRow();</div><div class="line">                foreach (PropertyInfo pi <span class="keyword">in</span> props)</div><div class="line">                &#123;</div><div class="line">                    row[pi.Name] = pi.GetValue(item, null) ?? DBNull.Value;</div><div class="line">                &#125;</div><div class="line">                tbl.Rows.Add(row);</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">return</span> tbl;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p><a href="http://edwardkuo.imas.tw/paper/2016/06/05/Net/2016-06-07/" target="_blank" rel="external">參考</a></p>
+<p><a href="https://dotblogs.com.tw/rainmaker/2014/12/25/147797" target="_blank" rel="external">參考</a></p>
+
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">標籤</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/Asp-Net/">Asp.Net</a> <a class="tag tag--primary tag--small t-link" href="/Blog/tags/LINQ/">LINQ</a>
+
+            </div>
         
         
-        <li class="pagination-number">第 1 頁 共 1 頁</li>
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/12/19/20171219_Nodejs/" data-tooltip="Line Chatbot with KKBOX Open API">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+        
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -237,6 +309,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2017/12/19/20171219_Nodejs/" data-tooltip="Line Chatbot with KKBOX Open API">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2017/12/21/20171221_Aspx/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -513,6 +683,8 @@
         <!--SCRIPTS-->
 <script src="/Blog/assets/js/script-lntdswfnsa2hgs7n4timmldw3koe4o5bwpgag1jebky598fqvzqdccxejqc5.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>
