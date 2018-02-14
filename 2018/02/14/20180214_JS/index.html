@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://lwsu.com.tw/Blog/2018/02/14/20180214_JS/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
 <meta property="og:description" content="所有的 JavaScript 內建物件都擁有一個唯讀的 prototype 屬性。 可以為原型添加『屬性』和『方法』，但是無法為該內建物件指派不同的原型，不過卻可以為使用者定義的物件指派新原型。">
-<meta property="og:updated_time" content="2018-02-14T07:46:06.601Z">
+<meta property="og:updated_time" content="2018-02-14T07:57:03.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript - Array.prototype 屬性 [筆記]">
 <meta name="twitter:description" content="所有的 JavaScript 內建物件都擁有一個唯讀的 prototype 屬性。 可以為原型添加『屬性』和『方法』，但是無法為該內建物件指派不同的原型，不過卻可以為使用者定義的物件指派新原型。">
@@ -217,7 +217,7 @@
 <h3 id="繼承方法"><a href="#繼承方法" class="headerlink" title="繼承方法"></a>繼承方法</h3><p>當繼承函式執行時，this 值指向繼承的物件，而不是在函式內擁有屬性的原型物件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var o = &#123;</div><div class="line">  a: 2,</div><div class="line">  m: function() &#123;</div><div class="line">    return this.a + 1;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(o.m()); // 3</div><div class="line">// 在這裡呼叫 o.m 時「this」指的是 o</div><div class="line"></div><div class="line"></div><div class="line">var p = Object.create(o);</div><div class="line">// p 是個從 o 繼承的物件</div><div class="line"></div><div class="line"></div><div class="line">p.a = 4; // 在 p 建立屬性「a」</div><div class="line">console.log(p.m()); // 5</div><div class="line"></div><div class="line">// 呼叫 p.m is 時「this」指的是 p</div><div class="line">// 因此在 p 繼承 o 的函式 m 時，</div><div class="line">// 「this.a」指的是 p.a：也就是 p 的自有屬性「a」</div></pre></td></tr></table></figure>
 <p><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">參考</a></p>
-<p><a href="https://msdn.microsoft.com/zh-tw/library/jj155285(v=vs.94" target="_blank" rel="external">參考</a>.aspx)</p>
+<p><a href="https://msdn.microsoft.com/zh-tw/library/jj155285\(v=vs.94\" target="_blank" rel="external">參考</a>.aspx)</p>
 
             
         </div>
