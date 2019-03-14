@@ -6,22 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Owen&#39;s Blog">
-    <title>所有文章 - Owen&#39;s Blog</title>
+    <title>ASP.NET - 閏年踩雷 - Owen&#39;s Blog</title>
     <meta name="author" content="Owen">
+    
+        <meta name="keywords" content="Asp.Net">
     
     
         <link rel="icon" href="https://davidpccu.github.io/images/favicon/favicon.ico">
     
     
-    <meta name="description" content="Learning note / Web developer / Asp.Net">
+    <meta name="description" content="出來混總是要還債的 只是沒想到這麼快就遇到程式在日期轉換，閏年掛掉的問題 在這裡做個簡單的紀錄">
+<meta name="keywords" content="Asp.Net">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Owen&#39;s Blog">
-<meta property="og:url" content="https://lwsu.com.tw/Blog/archives/page/3/index.html">
+<meta property="og:title" content="ASP.NET - 閏年踩雷">
+<meta property="og:url" content="https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/index.html">
 <meta property="og:site_name" content="Owen&#39;s Blog">
-<meta property="og:description" content="Learning note / Web developer / Asp.Net">
+<meta property="og:description" content="出來混總是要還債的 只是沒想到這麼快就遇到程式在日期轉換，閏年掛掉的問題 在這裡做個簡單的紀錄">
+<meta property="og:updated_time" content="2019-03-14T09:37:32.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Owen&#39;s Blog">
-<meta name="twitter:description" content="Learning note / Web developer / Asp.Net">
+<meta name="twitter:title" content="ASP.NET - 閏年踩雷">
+<meta name="twitter:description" content="出來混總是要還債的 只是沒想到這麼快就遇到程式在日期轉換，閏年掛掉的問題 在這裡做個簡單的紀錄">
     
     
         
@@ -61,7 +65,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/Blog/ ">Owen&#39;s Blog</a>
@@ -85,7 +89,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -169,29 +173,25 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/16/20170516_Aspx/">
-                            驗證網頁是否執行 Validator
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-16T12:00:00+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            ASP.NET - 閏年踩雷
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2019-03-14T12:00:00+08:00">
 	
-		    5月 16, 2017
+		    3月 14, 2019
     	
     </time>
     
@@ -203,129 +203,110 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>驗證網頁是否執行 Validator，避免被有心人修改後導致不會觸發Validator</p>
-                    
-                        <a href="/Blog/2017/05/16/20170516_Aspx/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/12/20170512_Tranquilpeak/">
-                            Tranquilpeak Theme 快速安裝、設定
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-12T12:00:00+08:00">
-	
-		    5月 12, 2017
-    	
-    </time>
-    
-        <span>分類 </span>
-        
-    <a class="category-link" href="/Blog/categories/Hexo/">Hexo</a>
-
-
     
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>出來混總是要還債的</p>
+<p>只是沒想到這麼快就遇到程式在日期轉換，閏年掛掉的問題</p>
+<p>在這裡做個簡單的紀錄</p>
+<a id="more"></a>
+<p>接獲業務有位客人下單2020/02/29出發的訂單</p>
+<p>在成立訂單後，轉往付款頁面就掛掉了</p>
+<p>看了一下SQL 資料格式正確 2020/2/29 上午 12:00:00</p>
+<p>嗯? 只有這張單異常，其他客人下單都沒問題</p>
+<p>到底發生了什麼事….</p>
+<p>後來檢查，程式上邏輯出現了小問題<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">string A = DateTime.Parse(B).ToString(&quot;MM/dd&quot;);</div><div class="line"></div><div class="line">// ....商業省略....</div><div class="line"></div><div class="line">A = DateTime.Parse(A).ToString(&quot;MM/dd&quot;);</div><div class="line"></div><div class="line">// ....商業省略....</div></pre></td></tr></table></figure></p>
+<p>乍看之下在正常執行時，並不會發生錯誤</p>
+<p>但是當遇到閏年的時候，只要沒有帶入年份 DateTime.Parse(“2/29”)，會被解讀成字串</p>
+<p>導致程式錯誤(當初一定是撞到牆才沒帶入年份)</p>
+<p>一般非閏年情況 DateTime.Parse(“1/1”)是不會有問題產生的</p>
+<p>結論: Parse一定要帶入年份</p>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p><a href="https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank" rel="external"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak"></a></p>
-<p>A gorgeous responsive theme for Hexo blog framework </p>
-<p><a href="http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak" target="_blank" rel="external"><img src="https://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v1.10.jpg" alt="Tranquilpeak"></a></p>
-<p>Quick Start!</p>
-                    
-                        <a href="/Blog/2017/05/12/20170512_Tranquilpeak/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/Blog/2017/05/11/20170511_Hexo/">
-                            Hexo 指令
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-11T12:00:00+08:00">
-	
-		    5月 11, 2017
-    	
-    </time>
-    
-        <span>分類 </span>
-        
-    <a class="category-link" href="/Blog/categories/Hexo/">Hexo</a>
-
-
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">標籤</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/Blog/tags/Asp-Net/">Asp.Net</a>
 
             </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-                    
-                        <a href="/Blog/2017/05/11/20170511_Hexo/" class="postShorten-excerpt_link link">
-                            繼續閱讀
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
         
-        <li class="pagination-prev">
-            
-                <a class="btn btn--default btn--small" href="/Blog/archives/page/2/">
-            
-                <i class="fa fa-angle-left text-base icon-mr"></i>
-                    <span>上一頁</span>
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2019/03/15/20190315_ETF/"  data-tooltip="前進美國劵商">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2018/05/29/20180529_ASPX/" data-tooltip="ASP.NET - showModalDialog + IFrame 網頁無法複製貼上">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
             </a>
         </li>
         
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
         
-        <li class="pagination-number">第 3 頁 共 3 頁</li>
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+        
+            
+        
+    </div>
+</article>
 
 
 
@@ -336,6 +317,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2019/03/15/20190315_ETF/"  data-tooltip="前進美國劵商">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Blog/2018/05/29/20180529_ASPX/" data-tooltip="ASP.NET - showModalDialog + IFrame 網頁無法複製貼上">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://lwsu.com.tw/Blog/2019/03/14/20190314_ASPX/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -612,6 +691,8 @@
         <!--SCRIPTS-->
 <script src="/Blog/assets/js/script-lntdswfnsa2hgs7n4timmldw3koe4o5bwpgag1jebky598fqvzqdccxejqc5.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>
