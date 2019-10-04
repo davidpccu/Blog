@@ -23,10 +23,10 @@
 <meta property="og:site_name" content="Owen&#39;s Blog">
 <meta property="og:description" content="想要進行數據分析，必須先精通爬蟲蒐集數據 最近在寫爬蟲檢視 DevTools Headers 資訊時，發現跳出下面這行警告訊息：   Provisional headers are shown">
 <meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_1.jpg">
-<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_2.jpg">
-<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_3.jpg">
-<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_4.jpg">
-<meta property="og:updated_time" content="2019-10-04T06:07:45.910Z">
+<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_5.jpg">
+<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_6.jpg">
+<meta property="og:image" content="https://lwsu.com.tw/Blog/img/20191004_7.jpg">
+<meta property="og:updated_time" content="2019-10-04T06:10:01.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chrome DevTools Request Headers 隱藏資訊">
 <meta name="twitter:description" content="想要進行數據分析，必須先精通爬蟲蒐集數據 最近在寫爬蟲檢視 DevTools Headers 資訊時，發現跳出下面這行警告訊息：   Provisional headers are shown">
@@ -223,14 +223,14 @@
 <p>看起來是有些資訊被 DevTools 隱藏了，導致在爬蟲時沒辦法繼續往下走，順手筆記一下解法</p>
 <h2 id="net-export-NetLog"><a href="#net-export-NetLog" class="headerlink" title="net-export (NetLog)"></a>net-export (NetLog)</h2><p>因為我們需要拿取被 DevTools 隱藏的資訊，所以要使用 Chromium Project 內建的網路事件記錄系統 (Network Logging System 簡稱NetLog)</p>
 <ol>
-<li>打開 <a href="chrome://net-export/" target="_blank" rel="external"><code>chrome://net-export/</code></a>，會看到以下的介面<br> <img src="../../../../img/20191004_2.jpg" alt=""></li>
+<li>打開 <a href="chrome://net-export/" target="_blank" rel="external"><code>chrome://net-export/</code></a>，會看到以下的介面<br> <img src="../../../../img/20191004_5.jpg" alt=""></li>
 <li>選擇第二項 <strong>Include cookies and credentials</strong></li>
 <li>點選Start Logging to Disk，選擇完輸出位置後開始記錄網路事件。</li>
 </ol>
 <h2 id="用-NetLog-Viewer-來打開儲存的-log-檔"><a href="#用-NetLog-Viewer-來打開儲存的-log-檔" class="headerlink" title="用 NetLog Viewer 來打開儲存的 log 檔"></a>用 NetLog Viewer 來打開儲存的 log 檔</h2><ol>
 <li>打開 <a href="https://netlog-viewer.appspot.com" target="_blank" rel="external">NetLog Viewer</a></li>
-<li>選擇剛剛儲存位置的json檔案<br> <img src="../../../../img/20191004_3.jpg" alt=""></li>
-<li>載入完成後會像這樣<br> <img src="../../../../img/20191004_4.jpg" alt=""></li>
+<li>選擇剛剛儲存位置的json檔案<br> <img src="../../../../img/20191004_6.jpg" alt=""></li>
+<li>載入完成後會像這樣<br> <img src="../../../../img/20191004_7.jpg" alt=""></li>
 <li>點開左側的 Event，搜尋你要的 Request 或 Cookie 鍵值，取得你要的資訊。</li>
 </ol>
 <p><a href="https://yukaii.tw/blog/2019/03/02/chrome-netlog-and-netlog-viewer-hidden-header-credentials/" target="_blank" rel="external">參考</a></p>
